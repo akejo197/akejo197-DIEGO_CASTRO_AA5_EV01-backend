@@ -1,7 +1,8 @@
 import db from "../config/db.js";
 
 export const login = async (req, res) => {
-    const {correo, password} = req.body;
+    const { correo, password } = req.body;
+    // Validar que los campos no estén vacíos
 
     if (!correo || !password) {
         return res.status(400).json({message: "Todos los campos son obligatorios"});
